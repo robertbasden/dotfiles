@@ -1,0 +1,7 @@
+# misc
+.DS_Store
+
+# npm & bower
+bower_components
+node_modules
+npm-debug.log
