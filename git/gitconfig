@@ -1,5 +1,6 @@
 [core]
 	editor = nano
+	excludesfile = ~/.gitignore
 
 [alias]
 	dwdiff = "!f() { git diff $@ | dwdiff --diff-input -P -c | less -R; }; f"
