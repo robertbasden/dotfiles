@@ -155,6 +155,12 @@ echo "done"
 # Actual symlink stuff
 #
 
+# Atom editor settings
+echo -n "Copying Atom settings.."
+mv -f ~/.atom ~/dotfiles_old/
+ln -s $HOME/dotfiles/atom ~/.atom
+echo "done"
+
 declare -a FILES_TO_SYMLINK=(
   'shell/zshrc'
   'git/gitconfig'
@@ -243,6 +249,13 @@ install_zsh
 git config --global core.excludesfile ~/.gitignore
 
 ###############################################################################
+# Atom                                                                        #
+###############################################################################
+
+# Install community packages
+apm install --packages-file $HOME/.atom/packages.list
+
+###############################################################################
 # Zsh                                                                         #
 ###############################################################################
 
@@ -258,4 +271,3 @@ defaults write com.apple.terminal StringEncodings -array 4
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
-
