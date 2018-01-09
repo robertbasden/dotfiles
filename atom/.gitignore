@@ -4,3 +4,7 @@ dev
 storage
 .node-gyp
 .npm
+.apm
+config.cson
+github.cson
+packages
