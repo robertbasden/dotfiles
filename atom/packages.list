@@ -5,3 +5,5 @@ minimap-selection
 pigments
 project-manager
 file-icons
+elm-format
+language-elm
